@@ -3,7 +3,7 @@ import chalk from "chalk";
 
 (   async () => {
 
-    async function openBrowser() {
+    async function openBrowserInstance() {
         const spinner = ora(chalk.yellow('Opening the browser instance...')).start();
         await new Promise(resolve => setTimeout(resolve, 3000));
         spinner.succeed(chalk.green('Instance Successfuly Created!'));
@@ -55,7 +55,7 @@ import chalk from "chalk";
     };
 
     async function generateTestDataSet() {
-        await openBrowser();
+        await openBrowserInstance();
         await loginWithUserCredentials();
         await createParentCategory();
         await createSubCategory();
